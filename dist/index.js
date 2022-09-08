@@ -46,7 +46,7 @@ function run() {
         try {
             const filePath = core.getInput('file_path');
             core.debug(`Read file ${filePath} ...`);
-            const yamlData = (0, yaml_1.read)(filePath);
+            const yamlData = yield (0, yaml_1.read)(filePath);
             core.info("content: " + JSON.stringify(yamlData));
             core.setOutput('data', JSON.stringify(yamlData));
         }
@@ -105,6 +105,7 @@ const yaml = __importStar(__nccwpck_require__(1917));
 function read(filePath) {
     return __awaiter(this, void 0, void 0, function* () {
         const content = yield fs_1.promises.readFile(filePath, 'utf8');
+        console.log(content);
         const yamlData = yaml.load(content);
         if (yamlData == null || yamlData == undefined) {
             throw 'Read yaml file failed';

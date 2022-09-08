@@ -5,7 +5,7 @@ async function run(): Promise<void> {
   try {
     const filePath: string = core.getInput('file_path')
     core.debug(`Read file ${filePath} ...`)
-    const yamlData = read(filePath)
+    const yamlData = await read(filePath)
     core.info("content: " + JSON.stringify(yamlData))
     core.setOutput('data', JSON.stringify(yamlData))
   } catch (error) {
