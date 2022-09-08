@@ -4,7 +4,10 @@ author: 'Quang Vo'
 inputs:
   file_path:
     required: true
-    description: 'relative file path to read'
+    description: 'Relative file path to read'
+output:
+  data:
+    description: 'Content of yaml file in json string format'
 runs:
   using: 'node16'
   main: 'dist/index.js'
