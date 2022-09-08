@@ -9,5 +9,5 @@ output:
   data:
     description: 'Content of yaml file in json string format'
 runs:
-  using: 'node18'
+  using: 'node16'
   main: 'dist/index.js'
