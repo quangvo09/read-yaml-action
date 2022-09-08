@@ -47,7 +47,8 @@ function run() {
             const filePath = core.getInput('file_path');
             core.debug(`Read file ${filePath} ...`);
             const yamlData = (0, yaml_1.read)(filePath);
-            core.setOutput('data', yamlData);
+            core.info("content: " + JSON.stringify(yamlData));
+            core.setOutput('data', JSON.stringify(yamlData));
         }
         catch (error) {
             if (error instanceof Error)
