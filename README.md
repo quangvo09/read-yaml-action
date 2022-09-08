@@ -16,8 +16,7 @@ Read YAML content and convert to JSON format
 name: Read yaml
 on:
   pull_request:
-    branches:
-      - master
+  push: [main, master]
 jobs:
   read-yaml:
     runs-on: ubuntu-latest
