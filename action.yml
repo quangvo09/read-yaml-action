@@ -1,11 +1,10 @@
-name: 'Your name here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Read YAML Action'
+description: 'Read yaml file and convert to json'
+author: 'Quang Vo'
 inputs:
-  milliseconds: # change this
+  file_path:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: 'relative file path to read'
 runs:
   using: 'node16'
   main: 'dist/index.js'
