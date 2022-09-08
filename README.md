@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: quangvo09/pull-request-action@v1@main
+      - uses: quangvo09/pull-request-action@main
         name: read
         with:
           file_path: ./action.yml
